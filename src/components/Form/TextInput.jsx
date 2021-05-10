@@ -2,7 +2,7 @@ import React from 'react'
 import { IonInput, IonItem, IonLabel } from '@ionic/react'
 import { useFormikContext } from 'formik'
 
-const Input = ({ name, label, type }) => {
+const TextInput = ({ name, label, type }) => {
   const {
     setFieldValue,
     values
@@ -21,4 +21,4 @@ const Input = ({ name, label, type }) => {
   )
 }
 
-export default Input
+export default TextInput
