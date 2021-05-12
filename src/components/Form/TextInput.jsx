@@ -9,13 +9,14 @@ const TextInput = ({ name, label, type }) => {
   } = useFormikContext()
 
   return (
-    <IonItem>
+    <IonItem style={{ width: '100%' }}>
       {label && (<IonLabel position="floating">{label}</IonLabel>)}
       <IonInput
         onIonChange={(e) => setFieldValue(name, e.detail.value)}
         value={values[name]}
         title={'ionInput'}
         type={type}
+        style={{ width: '100%' }}
       />
     </IonItem>
   )

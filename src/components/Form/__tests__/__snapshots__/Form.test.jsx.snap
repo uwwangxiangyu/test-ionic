@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form counter 1`] = `
+<div>
+  <div
+    style="width: 100%;"
+  >
+    <ion-item>
+      <ion-label>
+        Campaign Photo
+      </ion-label>
+      <ion-item>
+        <ion-input
+          type="number"
+          value="1"
+        />
+        <ion-icon
+          icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Remove Circle</title><path d='M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z' stroke-miterlimit='10' class='ionicon-fill-none ionicon-stroke-width'/><path stroke-linecap='round' stroke-linejoin='round' d='M336 256H176' class='ionicon-fill-none ionicon-stroke-width'/></svg>"
+          slot="start"
+          title="counterIncrement"
+        />
+        <ion-icon
+          icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Add Circle</title><path d='M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z' stroke-miterlimit='10' class='ionicon-fill-none ionicon-stroke-width'/><path stroke-linecap='round' stroke-linejoin='round' d='M256 176v160M336 256H176' class='ionicon-fill-none ionicon-stroke-width'/></svg>"
+          slot="end"
+          title="counterDecrement"
+        />
+      </ion-item>
+    </ion-item>
+    <ion-button
+      color="primary"
+      expand="block"
+    >
+      submit
+    </ion-button>
+  </div>
+</div>
+`;
+
+exports[`Form input 1`] = `
+<div>
+  <div
+    style="width: 100%;"
+  >
+    <ion-item
+      style="width: 100%;"
+    >
+      <ion-label
+        position="floating"
+      >
+        Fruit
+      </ion-label>
+      <ion-input
+        style="width: 100%;"
+        title="ionInput"
+        value="apple"
+      />
+    </ion-item>
+    <ion-button
+      color="primary"
+      expand="block"
+    >
+      submit
+    </ion-button>
+  </div>
+</div>
+`;

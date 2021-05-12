@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Home page 1`] = `
+<div>
+  <div
+    class="ion-page"
+  >
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Home
+        </ion-title>
+        <ion-avatar
+          slot="end"
+        >
+          <img
+            alt="avatar"
+            src="https://staging-dot-scraper-1ccc.ue.r.appspot.com/instagram/avatar/arabella.rollison"
+            style="padding: 8px;"
+          />
+        </ion-avatar>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content
+      fullscreen="true"
+    >
+      <ion-header
+        collapse="condense"
+      >
+        <ion-toolbar>
+          <ion-title
+            size="large"
+          >
+            Blank
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-item>
+        <ion-button>
+          <ion-label>
+            Login
+          </ion-label>
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button>
+          <ion-label>
+            Register
+          </ion-label>
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button>
+          <ion-label>
+            Debug
+          </ion-label>
+        </ion-button>
+      </ion-item>
+    </ion-content>
+  </div>
+</div>
+`;

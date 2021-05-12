@@ -8,7 +8,7 @@ import Counter from '../Counter'
 
 test('Form input', async () => {
   const submit = jest.fn()
-  const { findByTitle, findByText } = render(
+  const { findByTitle, findByText, container } = render(
     <Form initialValues={{ Fruit: '' }} onSubmit={submit}>
       <TextInput name={'Fruit'} label={'Fruit'}/>
       <FormButton title={'submit'}/>
@@ -21,11 +21,12 @@ test('Form input', async () => {
   fireEvent.click(button)
 
   await waitFor(() => expect(submit.mock.calls[0][0]).toEqual({ Fruit: 'apple' }))
+  expect(container).toMatchSnapshot()
 })
 
 test('Form counter', async () => {
   const submit = jest.fn()
-  const { findByTitle, findByText } = render(
+  const { findByTitle, findByText, container } = render(
     <Form initialValues={{ CampaignPhoto: 0 }} onSubmit={submit}>
       <Counter name={'CampaignPhoto'} label={'Campaign Photo'}/>
       <FormButton title={'submit'}/>
@@ -41,4 +42,5 @@ test('Form counter', async () => {
   fireEvent.click(button)
 
   await waitFor(() => expect(submit.mock.calls[0][0]).toEqual({ CampaignPhoto: 1 }))
+  expect(container).toMatchSnapshot()
 })

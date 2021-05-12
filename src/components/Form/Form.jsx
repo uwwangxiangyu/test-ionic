@@ -9,7 +9,7 @@ const Form = ({ children, initialValues, onSubmit, innerRef }) => {
       onSubmit={onSubmit}
       innerRef={innerRef}
     >
-      <div>
+      <div style={{ width: '100%' }}>
         {children}
       </div>
     </Formik>

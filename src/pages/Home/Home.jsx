@@ -6,13 +6,29 @@ import Header from '../../components/Header'
 const Home = ({ history }) => {
   return (
     <IonPage>
-      <Header/>
+      <Header title={'Home'}/>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
+        <IonItem>
+          <IonButton onClick={e => {
+            e.preventDefault()
+            history.push('/login')
+          }}>
+            <IonLabel>Login</IonLabel>
+          </IonButton>
+        </IonItem>
+        <IonItem>
+          <IonButton onClick={e => {
+            e.preventDefault()
+            history.push('/Register')
+          }}>
+            <IonLabel>Register</IonLabel>
+          </IonButton>
+        </IonItem>
         <IonItem>
           <IonButton onClick={e => {
             e.preventDefault()
