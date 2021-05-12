@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom'
-import { IonApp, IonRouterOutlet } from '@ionic/react'
+import { IonApp, IonIcon, IonLabel, IonRouterOutlet, IonSplitPane, IonTabBar, IonTabButton, IonTabs } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
 
 /* Core CSS required for Ionic components to work properly */
@@ -22,14 +22,39 @@ import '@ionic/react/css/display.css'
 import './theme/variables.css'
 import Home from './pages/Home'
 import Debug from './pages/Debug'
+import Menu from './components/Menu'
+import Creators from './pages/Creators'
+import Campaigns from './pages/Campaigns'
+import { giftOutline, hammerOutline, people } from 'ionicons/icons'
 
 const App = () => (
   <IonApp>
     <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/debug" component={Debug}/>
-      </IonRouterOutlet>
+      <IonSplitPane contentId="main" when={'false'}>
+        <Menu/>
+        <IonTabs>
+          <IonRouterOutlet id={'main'}>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/debug" component={Debug}/>
+            <Route exact path="/creators" component={Creators}/>
+            <Route exact path="/campaigns" component={Campaigns}/>
+          </IonRouterOutlet>
+          <IonTabBar slot="bottom" className={'ionTabBar'}>
+            <IonTabButton tab="creators" href="/creators">
+              <IonIcon icon={people}/>
+              <IonLabel>Creators</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="campaigns" href="/campaigns">
+              <IonIcon icon={giftOutline}/>
+              <IonLabel>Campaigns</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="debug" href="/debug">
+              <IonIcon icon={hammerOutline}/>
+              <IonLabel>Debug</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        </IonTabs>
+      </IonSplitPane>
     </IonReactRouter>
   </IonApp>
 )

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { IonContent, IonHeader, IonItemDivider, IonPage, IonTitle, IonToolbar } from '@ionic/react'
+import { getPlatforms, IonContent, IonLabel, IonPage } from '@ionic/react'
 import './Debug.css'
 import Form from '../../components/Form/Form'
 import CheckBox from '../../components/Form/CheckBox'
@@ -8,6 +8,7 @@ import FormButton from '../../components/Form/Button'
 import Counter from '../../components/Form/Counter'
 import RadioInput from '../../components/Form/RadioInput'
 import Switch from '../../components/Form/Switch'
+import Header from '../../components/Header'
 
 const Debug = () => {
   const inputRef = useRef()
@@ -17,13 +18,9 @@ const Debug = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title={'Debug'}/>
       <IonContent fullscreen>
-        <IonItemDivider/>
+        <IonLabel>{getPlatforms()}</IonLabel>
         <Form initialValues={{ Fruit: '' }} onSubmit={(values) => console.log(values)} innerRef={inputRef}>
           <TextInput name={'Fruit'} label={'Fruit'}/>
           <FormButton title={'submit'}/>

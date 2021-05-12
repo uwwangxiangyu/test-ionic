@@ -16,6 +16,7 @@ const Switch = ({ name, label }) => {
           setFieldValue(name, !values[name])
         }}
         checked={values[name]}
+        mode={'ios'}
       />
     </IonItem>
   )

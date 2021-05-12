@@ -1,14 +1,12 @@
 import { IonButton, IonContent, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react'
 import './Home.css'
+import React from 'react'
+import Header from '../../components/Header'
 
 const Home = ({ history }) => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header/>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>

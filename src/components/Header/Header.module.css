@@ -1,0 +1,9 @@
+.buttons {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .buttons {
+    display: flex;
+  }
+}
